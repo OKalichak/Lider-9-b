@@ -1,0 +1,255 @@
+<html>
+     <head>
+        <title>valya badabym</title>>
+        <style>
+            h1  {
+                color: aqua;
+                text-align: center;
+                margin: 35px;
+                border: 10px solid pink; 
+            }
+            </style>
+     </head>
+     <body>
+        
+        <h1>Валентина бадабум</h1>
+        <input type="text" id="serchField">
+        <button onclick="search()">бадабум бада бім<button>
+        <script>
+            var A = " бадабумівна";
+            var B = ["нейсті бадабум", "соф'ян бадабумівна" , "володька бадабумчик" , "ляна бадабам", "крістіна голден бадабум"];
+          
+            function search () {
+                A = document.getElementById("serchField").value;
+                for (let index=0; index <B.length; index++) {
+                    if (B[index] ==A) {
+                        console.log("found: "+B[index])
+                    }
+                }
+            }
+            function addElement() {
+                someText = document.getElementById("inputField").value;
+                B.push(someText)
+                console.log(B);
+            }
+        </script>
+        <input type="text" id="inputField">
+        <button onclick= "addElement()">бідобім ОУЄ</button> 
+         
+           <t id="t1">бадобем</t>
+              <vala=id"vala1">ауф</vala>
+           <script>
+           document.getElementById("t1").innerHTML="БОДОБУМ ЦЕ БАДОБІМ"
+
+            let text = ["нейсті бадабум", "соф'ян бадабумівна" , "володька бадабумчик" , "ляна бадабам", "крістіна голден бадабум"];
+            document.getElementById("vala").innerHTML =text;
+      </script>
+           <div class="square"></div>
+            
+           <table id="field">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+          <style>
+        #field td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+       </style>
+       <script>
+            var cells = document.querySelectorAll('#field td');
+
+            function start(cells) {
+
+            }
+            function start(cells) {
+
+            }  
+            let cells = document.querySelectorAll('#field td');
+            start(cells);
+
+function start(cells) {
+	for (let cell of cells) {
+		cell.addEventListener('click', function() {
+			this.textContent = 'X';
+		});
+	}
+}
+function start(cells) {
+	let i = 0;
+	
+	for (let cell of cells) {
+		cell.addEventListener('click', function() {
+			this.textContent = 'X';
+			
+			i++;
+		});
+	}
+}
+            for (let cell of cells) {
+                    cell.addEventListener('click', function() {
+                        if (i % 2 == 0) {
+                            this.textContent = 'X';
+                        } else {
+                            this.textContent = '0';
+                        }
+                        
+                        i++;
+                    });
+                }
+
+                let gamers = ['X', 'O'];
+                
+                    let key = i % 2;
+
+                    console.log(gamers[key]);
+
+                    function start(cells) {
+                    let i = 0;
+                    
+                    for (let cell of cells) {
+                        cell.addEventListener('click', function() {
+                            this.textContent = ['X', 'O'][i % 2];
+                            i++;
+                        });
+                    }
+                }
+
+                function init(selector) {
+	let cells = document.querySelectorAll('#field td');
+	let i = 0;
+	
+	for (let cell of cells) {
+		cell.addEventListener('click', function step() {
+			this.textContent = ['X', 'O'][i % 2];
+			this.removeEventListener('click', step);
+			
+			i++;
+		});
+	}
+}
+
+
+function start(cells) {
+	let i = 0;
+	
+	for (let cell of cells) {
+		cell.addEventListener('click', function step() {
+			this.textContent = ['X', 'O'][i % 2];
+			this.removeEventListener('click', step);
+			
+			if (isVictory(cells)) {
+				alert('');
+			}
+			
+			i++;
+		});
+	}
+}
+function start(cells) {
+	let i = 0;
+	
+	for (let cell of cells) {
+		cell.addEventListener('click', function step() {
+			this.textContent = ['X', 'O'][i % 2];
+			this.removeEventListener('click', step);
+			
+			if (isVictory(cells)) {
+				alert(this.textContent);
+			}
+			
+			i++;
+		});
+	}
+}
+
+                let combs = [
+                    [0, 1, 2],
+                    [3, 4, 5],
+                    [6, 7, 8],
+                    [0, 3, 6],
+                    [1, 4, 7],
+                    [2, 5, 8],
+                    [0, 4, 8],
+                    [2, 4, 6],
+                ];           
+
+                function isVictory(cells) {
+	let combs = [
+		[0, 1, 2],
+		[3, 4, 5],
+		[6, 7, 8],
+		[0, 3, 6],
+		[1, 4, 7],
+		[2, 5, 8],
+		[0, 4, 8],
+		[2, 4, 6],
+	];
+
+                for (let comb of combs) {
+                    if (
+                        cells[comb[0]].textContent == cells[comb[1]].textContent &&
+                        cells[comb[1]].textContent == cells[comb[2]].textContent &&
+                        cells[comb[0]].textContent != ''
+                    ) {
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+
+
+
+            function start(cells) {
+	let i = 0;
+	
+                for (let cell of cells) {
+                    cell.addEventListener('click', function step() {
+                        this.textContent = ['X', 'O'][i % 2];
+                        this.removeEventListener('click', step);
+                        
+                        if (isVictory(cells)) {
+                            alert(this.textContent);
+                        } else if (i == 8) {
+                            alert('нічія');
+                        }
+                        
+                        i++;
+                    });
+                }
+            }
+       </script>
+            <table id="field"></table>
+           
+            <style>
+                #field td {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	text-align: center;
+	font-weight: bold;
+}
+
+            </style>
+       let rows = 3;
+       let cols = 3;
+
+     </body>
+ </html>
