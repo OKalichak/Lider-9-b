@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CREEPER</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+  <input type="text" id="searchField">
+  <button onclick="search()">search</button>
+  <script>
+    var a = 'Creeper'
+    var b = ['Steve', 'Alex', 'Skeleton', 'Zombie', 'Creeper', 'Spider', 'Enderman', 'Witch', 'Piglin']
+    
+    function search() {
+      a = document.getElementById("searchField").value;
+      for (let index = 0; index < b.length; index++) {
+        if (b[index] == a) {
+            console.log("found: "+b[index])
+        }
+      }
+    }
+
+  </script>
+
+  <input type="text" id="textInput"> 
+  <button onclick="addElement()">add to array</button>
+<script>
+function addElement() {
+  var inputText = document.getElementById('textInput').value;
+  b.push(inputText);
+  console.log(b);
+}
+
+</script>
+
+
+
+ <img src="https://pm1.aminoapps.com/6700/f4975b331e4c19e373db33c425f61c2b0645ea31_00.jpg" alt="кріпір">
+
+ <!DOCTYPE html>
+ <html lang="uk">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Хрестики-нолики</title>
+     <style>
+         .board {
+             display: grid;
+             grid-template-columns: repeat(3, 1fr);
+             gap: 10px;
+         }
+         .cell {
+             width: 100px;
+             height: 100px;
+             border: 1px solid #000;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 24px;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>Гра "Хрестики-нолики"</h1>
+     <div class="board">
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+         <div class="cell" onclick="makeMove(this)"></div>
+     </div>
+ 
+     <script>
+         let currentPlayer = 'X';
+ 
+         function makeMove(cell) {
+             if (!cell.textContent) {
+                 cell.textContent = currentPlayer;
+                 currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+             }
+         }
+     </script>
+ </body>
+ </html>
+ 
+
+</body>
+</html> 
